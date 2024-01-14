@@ -41,7 +41,7 @@ describe('renders the app', () => {
   });
 
   it('should render the title', async () => {
-    expect(document.title).toBe("Michael D'Angelo");
+    expect(document.title).toBe('Cameron MacKinnon');
   });
 
   it('can navigate to /about', async () => {
@@ -81,22 +81,10 @@ describe('renders the app', () => {
     expect(window.location.pathname).toBe('/projects');
   });
 
-  it('can navigate to /stats', async () => {
-    expect.assertions(5);
-    const contactLink = document.querySelector('#header > nav > ul > li:nth-child(4) > a');
-    expect(contactLink).toBeInTheDocument();
-    await act(async () => {
-      await contactLink.click();
-    });
-    expect(document.title).toContain('Stats |');
-    expect(window.location.pathname).toBe('/stats');
-    expect(global.fetch).toHaveBeenCalledTimes(1);
-    expect(jsonMock).toHaveBeenCalledTimes(1);
-  });
-
+  // ## had to change nth-child to be 4 from 5 because I removed stats page
   it('can navigate to /contact', async () => {
     expect.assertions(3);
-    const contactLink = document.querySelector('#header > nav > ul > li:nth-child(5) > a');
+    const contactLink = document.querySelector('#header > nav > ul > li:nth-child(4) > a');
     expect(contactLink).toBeInTheDocument();
     await act(async () => {
       await contactLink.click();
@@ -105,3 +93,16 @@ describe('renders the app', () => {
     expect(window.location.pathname).toBe('/contact');
   });
 });
+
+// it('can navigate to /stats', async () => {
+//   expect.assertions(5);
+//   const contactLink = document.querySelector('#header > nav > ul > li:nth-child(4) > a');
+//   expect(contactLink).toBeInTheDocument();
+//   await act(async () => {
+//     await contactLink.click();
+//   });
+//   expect(document.title).toContain('Stats |');
+//   expect(window.location.pathname).toBe('/stats');
+//   expect(global.fetch).toHaveBeenCalledTimes(1);
+//   expect(jsonMock).toHaveBeenCalledTimes(1);
+// });
