@@ -22,10 +22,21 @@
 
 		.title {
 			text-align: center;
-			margin-bottom: 2em;
+			margin-bottom: 1em;
 		}
 	}
 	.experience {
+		.title {
+			text-align: center;
+		}
+		.job {
+			margin: 1em;
+			p{
+				margin: 0;
+			}
+		}
+	}
+	.internships {
 		.title {
 			text-align: center;
 		}
@@ -76,12 +87,12 @@
 		font-size: 0.9em;
 	}
 
-	.references {
-		margin: 2em 0;
-		.title {
-			text-align: center;
-		}
-	}
+	// .references {
+	// 	margin: 2em 0;
+	// 	.title {
+	// 		text-align: center;
+	// 	}
+	// }
 }
 
 .daterange {
