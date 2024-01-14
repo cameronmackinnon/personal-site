@@ -58,11 +58,12 @@ const Skills = ({ skills, categories }) => {
 
   return (
     <div className="skills">
-      <div className="link-to" id="skills" />
+      <div className="link-to" id="technical skills" />
       <div className="title">
-        <h3>Skills</h3>
-        <p>Note: I think these sections are silly, but everyone seems to have one.
-          Here is a *mostly* honest overview of my skills.
+        <h3>Technical Skills</h3>
+        <p>Here is a rough attempt at quantifying my software skills using this
+          (completely subjective) scale:<br /><br />1: Beginner  ||  3: Intermediate
+          ||  5: Expert
         </p>
       </div>
       <div className="skill-button-container">

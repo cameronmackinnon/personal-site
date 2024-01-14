@@ -2,12 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 
+// const Cell = ({ data }) => (
+//   <div className="cell-container">
+//     <article className="mini-post">
+//       <header>
+//         <h3><a href={data.link}>{data.title}</a></h3>
+//         <time className="published">{dayjs(data.startDate).format('MMMM, YYYY')}
+// - {dayjs(data.endDate).format('MMMM, YYYY')}</time>
+//       </header>
+//       <a href={data.link} className="image">
+//         <img src={`${process.env.PUBLIC_URL}${data.image}`} alt={data.title} />
+//       </a>
+//       <div className="description">
+//         <p>{data.desc}</p>
+//       </div>
+//     </article>
+//   </div>
+// );
+
 const Cell = ({ data }) => (
   <div className="cell-container">
     <article className="mini-post">
       <header>
         <h3><a href={data.link}>{data.title}</a></h3>
-        <time className="published">{dayjs(data.date).format('MMMM, YYYY')}</time>
+        <time className="published">{dayjs(data.startDate).format('MMMM, YYYY')} - {dayjs(data.endDate).format('MMMM, YYYY')}</time>
       </header>
       <a href={data.link} className="image">
         <img src={`${process.env.PUBLIC_URL}${data.image}`} alt={data.title} />
@@ -24,7 +42,8 @@ Cell.propTypes = {
     title: PropTypes.string.isRequired,
     link: PropTypes.string,
     image: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
+    startDate: PropTypes.string.isRequired,
+    endDate: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
   }).isRequired,
 };
