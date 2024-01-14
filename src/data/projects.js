@@ -1,47 +1,47 @@
-// TODO Add a couple lines about each project
 const data = [
   {
-    title: 'Nearest Dollar',
-    subtitle: '2015 BVP Hackathon',
-    image: '/images/projects/nearestdollar.jpg',
-    date: '2015-11-20',
+    title: 'Farm Staff',
+    subtitle: '...',
+    image: '/images/projects/IMG_7540.jpg',
+    link: 'https://joyfullyorganicfarm.ca/',
+    startDate: '2023-11',
+    endDate: '2023-12',
     desc:
-      'Built for a social impact hackathon. '
-      + 'NearestDollar connected to your bank accounts, credit cards, '
-      + 'or debit cards and rounded up your purchases to donate the balance to '
-      + 'the charity of your choice.',
+      'This past fall, I worked for 2 months on an organic vegetable farm in Markham, ON. '
+      + 'Driven by a desire to learn about sustainable agriculture practices, I helped a small-scale, production-focused farm '
+      + 'with harvesting, washing, processing, and selling 30+ varieties of vegetables. '
+      + 'This experience solidified my commitment to eating local and sustainable produce (and to potentially growing some of my own in the future).',
   },
   {
-    title: 'Harvest',
-    subtitle: 'Won 3rd. place in 2015 Techcrunch Disrupt SF Hackathon',
-    link: 'https://devpost.com/software/harvest',
-    image: '/images/projects/harvest.jpg',
-    date: '2015-09-20',
+    title: 'Tree Planter',
+    subtitle: '...',
+    // image: '/images/projects/IMG_2315.jpg',
+    // image: '/images/projects/IMG_7540.jpg',
+    image: '/images/projects/IMG_2315.JPG',
+    link: 'https://windfirm.ca/',
+    startDate: '2021-05',
+    endDate: '2021-07',
     desc:
-      'Won ~ $7000 in prizes for an advanced, low cost monitoring solution '
-      + 'for crops. Harvest was designed to catch irrigation leaks, overwatering, '
-      + 'and nutrient deficiencies at an affordable price for the developing world.',
+      'In the midst of the pandemic, I headed West to plant trees in Northern BC. '
+      + "The hours were long, the conditions were severe, and the work was excruciating; it was the hardest work I've ever done. "
+      + "But living in the forest with a great group of people is an experience I'll never forget. "
+      + 'Towards the end of the season, I was planting over 3000 trees per day, which roughly equals 1 tree every 6 seconds.',
   },
   {
-    title: 'Space Potato',
-    subtitle: 'A kickstarter funded potato powered weather balloon.',
-    link: 'http://www.spacepotato.org',
-    image: '/images/projects/spacepotato.jpg',
-    date: '2015-06-28',
+    title: 'Varsity Athlete',
+    subtitle: '...',
+    image: '/images/projects/socca.jpeg',
+    link: 'https://gogaelsgo.com/sports/mens-soccer',
+    startDate: '2016-08',
+    endDate: '2018-12',
     desc:
-      'Launched a potato battery powered weather balloon with two cameras '
-      + 'and gps transponder. Resulting photos were published in a coffee table book. '
-      + 'You can email me for a copy.',
-  },
-  {
-    title: 'Cat Detector',
-    subtitle: 'A convolutional neural network to classify cats! (and dogs)',
-    image: '/images/projects/catdetector.jpg',
-    date: '2015-05-15',
-    desc:
-      'Trained a convolutional neural network to classify between ~ 80 cats breeds. '
-      + 'Over 60,000 cats were classified before server bills made the project too expensive '
-      + 'to continue hosting.',
+      'I played on the Queen'
+      + "'s"
+      + ' Varsity Soccer Team for the first three years of my undergraduate degree. '
+      + 'Balancing a varsity sport with a demanding engineering program was no small feat - I spent 25-30 hours per '
+      + "week at practice, in meetings, or on road trips. In my third year, I was given the privilege of being named the team's captain. "
+      + 'I was hoping to continue playing for five years, but I sadly had to cut my career short as I suffered a handful of concussions. '
+      + 'I continue to play soccer to this day, albeit more recreationally than before.',
   },
 ];
 

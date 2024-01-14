@@ -16,20 +16,21 @@ const About = () => {
       });
   });
 
-  const count = markdown.split(/\s+/)
-    .map((s) => s.replace(/\W/g, ''))
-    .filter((s) => s.length).length;
+  // small update to make commit
+  // const count = markdown.split(/\s+/)
+  //   .map((s) => s.replace(/\W/g, ''))
+  //   .filter((s) => s.length).length;
 
   return (
     <Main
       title="About"
-      description="Learn about Michael D'Angelo"
+      description="Learn about Cameron MacKinnon"
     >
       <article className="post markdown" id="about">
         <header>
           <div className="title">
             <h2><Link to="/about">About Me</Link></h2>
-            <p>(in about {count} words)</p>
+            <p>or: my pseudo-cover letter</p>
           </div>
         </header>
         <Markdown>

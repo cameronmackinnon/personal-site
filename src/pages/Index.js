@@ -5,27 +5,29 @@ import Main from '../layouts/Main';
 
 const Index = () => (
   <Main
-    description={"Michael D'Angelo's personal website. New York based Stanford ICME graduate, "
-    + 'VP of Engineering at Smile Identity, co-founder of Arthena and Matroid, and YC Alumni.'}
+    description="cam website"
   >
     <article className="post" id="index">
       <header>
         <div className="title">
-          <h2><Link to="/">About this site</Link></h2>
+          <h2><Link to="/">Welcome!</Link></h2>
           <p>
-            A beautiful, responsive, statically-generated,
-            react application written with modern Javascript.
+            A corner of the internet to learn more about Cam
           </p>
         </div>
       </header>
-      <p> Welcome to my website. Please feel free to read more <Link to="/about">about me</Link>,
+      <p>I built this site to expand my software skills and to have a platform to display my resume.
+        I hope you enjoy. To get started, you can read more <Link to="/about">about me</Link>,
         or you can check out my {' '}
-        <Link to="/resume">resume</Link>, {' '}
-        <Link to="/projects">projects</Link>, {' '}
-        view <Link to="/stats">site statistics</Link>, {' '}
-        or <Link to="/contact">contact</Link> me.
+        <Link to="/resume">resume</Link> {' '} or
+        <Link to="/projects"> other experiences</Link>.
       </p>
-      <p> Source available <a href="https://github.com/mldangelo/personal-site">here</a>.</p>
+      <p> <b>DISCLAIMER:</b> I forked <a href="https://github.com/mldangelo/personal-site">this repo</a> to make this site.
+        I cannot take credit for the majority of the work; however, I made several stylistic changes
+        (layout, formatting, structure, etc.) so that the site better suited my needs. The app was
+        developed, in the author&apos;s words, as a &quot;responsive, statically-generated, react
+        application written with modern javascript&quot;.
+      </p>
     </article>
   </Main>
 );

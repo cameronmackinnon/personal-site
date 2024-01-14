@@ -1,133 +1,78 @@
 const skills = [
   {
     title: 'Javascript',
-    competency: 4,
+    competency: 1,
     category: ['Web Development', 'Languages', 'Javascript'],
   },
   {
+    title: 'Java',
+    competency: 1,
+    category: ['Languages'],
+  },
+  {
+    title: 'C',
+    competency: 1,
+    category: ['Languages'],
+  },
+  {
     title: 'Node.JS',
-    competency: 5,
+    competency: 1,
     category: ['Web Development', 'Javascript'],
   },
   {
     title: 'React',
-    competency: 2,
+    competency: 1,
     category: ['Web Development', 'Javascript'],
   },
   {
     title: 'Next.JS',
-    competency: 3,
+    competency: 1,
     category: ['Web Development', 'Javascript'],
   },
   {
-    title: 'Bash',
+    title: 'Zsh',
     competency: 2,
     category: ['Tools', 'Languages'],
   },
   {
-    title: 'Amazon Web Services',
-    competency: 4,
-    category: ['Web Development', 'Tools'],
-  },
-  {
-    title: 'Heroku',
-    competency: 2,
-    category: ['Web Development', 'Tools'],
-  },
-  {
-    title: 'MongoDB',
+    title: 'PostgreSQL/MSSQL/SQL/Supabase',
     competency: 3,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'ElasticSearch',
-    competency: 2,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'PostgreSQL/SQLite3/SQL/Redshift',
-    competency: 4,
     category: ['Web Development', 'Databases', 'Languages'],
   },
   {
-    title: 'Redis',
-    competency: 3,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'Data Mining',
-    competency: 3,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Express.JS',
+    title: 'SQL Alchemy/Alembic',
     competency: 2,
-    category: ['Web Development', 'Javascript'],
+    category: ['Web Development', 'Databases', 'Python'],
   },
   {
-    title: 'D3',
+    title: 'Pytest',
     competency: 2,
-    category: ['Web Development', 'Javascript'],
+    category: ['Python'],
   },
   {
-    title: 'Flask',
-    competency: 3,
+    title: 'FastAPI/Postman',
+    competency: 1,
     category: ['Web Development', 'Python'],
   },
   {
-    title: 'FastAPI',
-    competency: 3,
-    category: ['Web Development', 'Python'],
-  },
-  {
-    title: 'Git/Mercurial',
-    competency: 3,
+    title: 'Git',
+    competency: 2,
     category: ['Tools'],
   },
   {
-    title: 'Kubernetes',
-    competency: 2,
-    category: ['Tools', 'Data Engineering'],
-  },
-  {
-    title: 'Google Cloud Compute',
-    competency: 2,
-    category: ['Tools', 'Web Development'],
-  },
-  {
-    title: 'AWS',
-    competency: 3,
+    title: 'Google Cloud',
+    competency: 1,
     category: ['Tools', 'Web Development'],
   },
   {
     title: 'Docker',
-    competency: 3,
+    competency: 1,
     category: ['Tools', 'Data Engineering'],
   },
   {
-    title: 'AWS Lambda',
-    competency: 3,
-    category: ['Tools', 'Web Development'],
-  },
-  {
-    title: 'Numpy',
+    title: 'Numpy/Math',
     competency: 3,
     category: ['Data Science', 'Data Engineering', 'Python', 'ML Engineering'],
-  },
-  {
-    title: 'Numba',
-    competency: 2,
-    category: ['Data Science', 'Data Engineering', 'Python'],
-  },
-  {
-    title: 'Tensorflow + Keras',
-    competency: 3,
-    category: ['ML Engineering', 'Python'],
-  },
-  {
-    title: 'PyTorch',
-    competency: 3,
-    category: ['ML Engineering', 'Python'],
   },
   {
     title: 'Jupyter',
@@ -136,38 +81,33 @@ const skills = [
   },
   {
     title: 'Typescript',
-    competency: 3,
+    competency: 1,
     category: ['Web Development', 'Languages', 'Javascript'],
   },
   {
-    title: 'HTML + SASS/SCSS/CSS',
-    competency: 3,
+    title: 'HTML + SCSS/CSS',
+    competency: 1,
     category: ['Web Development', 'Languages'],
+  },
+  {
+    title: 'Azure',
+    competency: 3,
+    category: ['Web Development', 'Tools'],
+  },
+  {
+    title: 'Excel/VBA',
+    competency: 3,
+    category: ['Tools', 'Languages'],
+  },
+  {
+    title: 'CI/CD, Terraform, YAML',
+    competency: 2,
+    category: ['Languages', 'Data Engineering'],
   },
   {
     title: 'Python',
-    competency: 5,
-    category: ['Languages', 'Python', 'ML Engineering'],
-  },
-  {
-    title: 'Ruby',
-    competency: 2,
-    category: ['Languages'],
-  },
-  {
-    title: 'Ruby on Rails',
     competency: 3,
-    category: ['Web Development', 'Languages'],
-  },
-  {
-    title: 'C++',
-    competency: 1,
-    category: ['Languages'],
-  },
-  {
-    title: 'Julia',
-    competency: 2,
-    category: ['Languages'],
+    category: ['Languages', 'Python', 'ML Engineering'],
   },
   {
     title: 'MATLAB',
@@ -176,70 +116,48 @@ const skills = [
   },
   {
     title: 'R',
-    competency: 2,
+    competency: 1,
     category: ['Languages'],
   },
   {
-    title: 'Data Visualization',
-    competency: 3,
-    category: ['Data Science', 'Javascript'],
+    title: 'Salesforce',
+    competency: 2,
+    category: ['Tools'],
   },
   {
-    title: 'GraphQL',
+    title: 'Data Visualization (Qlik)',
     competency: 2,
-    category: ['Web Development', 'Databases'],
+    category: ['Data Science'],
   },
   {
     title: 'Pandas',
-    competency: 5,
+    competency: 3,
     category: ['Data Engineering', 'ML Engineering', 'Python'],
   },
   {
     title: 'Matplotlib',
-    competency: 3,
+    competency: 1,
     category: ['Data Engineering', 'ML Engineering', 'Python'],
   },
   {
-    title: 'Scikit-Learn',
-    competency: 4,
-    category: ['Data Engineering', 'ML Engineering', 'Python'],
-  },
-  {
-    title: 'Spark',
+    title: 'Spark/PySpark',
     competency: 2,
     category: ['Data Engineering', 'ML Engineering'],
   },
-  {
-    title: 'Dagster',
-    competency: 2,
-    category: ['Data Engineering', 'Python', 'ML Engineering'],
-  },
-  {
-    title: 'Mypy',
-    competency: 3,
-    category: ['Python'],
-  },
-  {
-    title: 'Pylint',
-    competency: 4,
-    category: ['Data Engineering', 'Python'],
-  },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 
-// this is a list of colors that I like. The length should be === to the
-// number of categories. Re-arrange this list until you find a pattern you like.
 const colors = [
-  '#6968b3',
-  '#37b1f5',
-  '#40494e',
-  '#515dd4',
-  '#e47272',
-  '#cc7b94',
-  '#3896e2',
-  '#c3423f',
-  '#d75858',
-  '#747fff',
-  '#64cb7b',
+  '#6699CC',
+  '#88B3D6',
+  '#66B5CC',
+  '#0066CC',
+  '#0077B6',
+  '#3399FF',
+  '#AAD5E7',
+  '#66B2FF',
+  '#99CCFF',
+  '#C3DFF1',
+  '#E6F7FF',
 ];
 
 const categories = [
