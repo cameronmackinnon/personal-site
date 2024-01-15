@@ -30,6 +30,10 @@ jobs:
     runs-on: ubuntu-20.04
     timeout-minutes: 10
     steps:
+      - name: Display Node.js version
+        run: node -v
+      - name: Display npm version
+        run: npm -v
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Node
