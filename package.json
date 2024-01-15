@@ -14,7 +14,7 @@
     "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js",
     "build": "rimraf ./build && react-scripts build",
     "lint": "eslint \"**/*.js\"",
-    "predeploy": "NODE_OPTIONS=--max_old_space_size=4096 npm run build && react-snap",
+    "predeploy": "node --max_old_space_size=4096 npm run build && react-snap",
     "start": "react-scripts start",
     "test": "npx jest"
   },
