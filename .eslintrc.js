@@ -20,7 +20,7 @@ module.exports = {
       'aspects': ['noHref', 'invalidHref', 'preferButton'],
       'linebreak-style': 0,
       'global-require': 0,
-      'eslint linebreak-style': [0, 'error', 'windows']
+      'eslint linebreak-style': [0, 'error', 'windows'],
     }],
     'jsx-a11y/click-events-have-key-events': 0,
     'jsx-a11y/href-no-hash': 'off',
