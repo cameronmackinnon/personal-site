@@ -10,7 +10,7 @@ import { act } from 'react-dom/test-utils';
 import App from '../App';
 
 describe('renders the app', () => {
-  // mocks the fetch API used on the stats page and the about page.
+  // mocks the fetch API used on the stats page and the about page. // for commit
   const jsonMock = jest.fn(() => Promise.resolve({}));
   const textMock = jest.fn(() => Promise.resolve(''));
   global.fetch = jest.fn(() => Promise.resolve({
