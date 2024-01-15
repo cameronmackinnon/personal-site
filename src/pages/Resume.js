@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 
@@ -57,7 +57,7 @@ const Resume = () => (
     <article className="post" id="resume">
       <header>
         <div className="title">
-          <h2><Link to="resume">Resume</Link></h2>
+          <h2>Resume</h2>
           <div className="link-container">
             {Object.keys(sections).map((sec, index, array) => (
               <React.Fragment key={sec}>

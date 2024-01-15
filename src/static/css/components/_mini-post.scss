@@ -9,9 +9,9 @@
   position: relative;
 
   .description {
-    position: absolute;
+    // position: absolute;
+    // bottom: 0;
     padding: 0;
-    bottom: 0;
     border-top: solid 1px _palette(border);
 
     p {
@@ -33,9 +33,9 @@
   
   @media (max-width: 480px) {
     .description {
-      position: inherit;
+      // position: inherit;
+      // bottom: inherit;
       padding: 0;
-      bottom: inherit;
     }
   }
 }

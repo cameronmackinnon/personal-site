@@ -2,7 +2,7 @@ const skills = [
   {
     title: 'Javascript',
     competency: 1,
-    category: ['Web Development', 'Languages', 'Javascript'],
+    category: ['Web Development', 'Languages'],
   },
   {
     title: 'Java',
@@ -17,17 +17,12 @@ const skills = [
   {
     title: 'Node.JS',
     competency: 1,
-    category: ['Web Development', 'Javascript'],
+    category: ['Web Development'],
   },
   {
     title: 'React',
     competency: 1,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'Next.JS',
-    competency: 1,
-    category: ['Web Development', 'Javascript'],
+    category: ['Web Development'],
   },
   {
     title: 'Zsh',
@@ -46,7 +41,7 @@ const skills = [
   },
   {
     title: 'Pytest',
-    competency: 2,
+    competency: 1,
     category: ['Python'],
   },
   {
@@ -72,7 +67,7 @@ const skills = [
   {
     title: 'Numpy/Math',
     competency: 3,
-    category: ['Data Science', 'Data Engineering', 'Python', 'ML Engineering'],
+    category: ['Data Science', 'Data Engineering', 'Python'],
   },
   {
     title: 'Jupyter',
@@ -80,12 +75,7 @@ const skills = [
     category: ['Data Science', 'Python'],
   },
   {
-    title: 'Typescript',
-    competency: 1,
-    category: ['Web Development', 'Languages', 'Javascript'],
-  },
-  {
-    title: 'HTML + SCSS/CSS',
+    title: 'HTML + CSS',
     competency: 1,
     category: ['Web Development', 'Languages'],
   },
@@ -107,7 +97,7 @@ const skills = [
   {
     title: 'Python',
     competency: 3,
-    category: ['Languages', 'Python', 'ML Engineering'],
+    category: ['Languages', 'Python'],
   },
   {
     title: 'MATLAB',
@@ -132,17 +122,17 @@ const skills = [
   {
     title: 'Pandas',
     competency: 3,
-    category: ['Data Engineering', 'ML Engineering', 'Python'],
+    category: ['Data Engineering', 'Python'],
   },
   {
     title: 'Matplotlib',
     competency: 1,
-    category: ['Data Engineering', 'ML Engineering', 'Python'],
+    category: ['Data Engineering', 'Python'],
   },
   {
     title: 'Spark/PySpark',
     competency: 2,
-    category: ['Data Engineering', 'ML Engineering'],
+    category: ['Data Engineering'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 

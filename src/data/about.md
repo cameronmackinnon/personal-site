@@ -2,6 +2,8 @@
 
 I am former Senior Consultant from KPMG looking to transition to a career in software. I built this website in an attempt to build out my software skills (React, Javascript, Node.js) and to have a public platform to display my resume (and other potentially relevant experiences). This project has been extremely fulfilling and I plan on pursuing more personal software projects in the future.
 <br><br>
+
+## KPMG
 From June 2021 to April 2023, I worked at KPMG in the Financial Services department. At KPMG, I worked on a variety of internal and external projects that primarily focused on developing or improving software applications for insurance companies. A few notable projects that I worked on include:<br><br>
 
 * Developing an ESG model to help financial institutions calculate their Scope 1 & 2 building

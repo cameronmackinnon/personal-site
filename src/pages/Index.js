@@ -12,7 +12,7 @@ const Index = () => (
         <div className="title">
           <h2><Link to="/">Welcome!</Link></h2>
           <p>
-            A corner of the internet to learn more about Cam
+            A personal website to learn more about Cam
           </p>
         </div>
       </header>
@@ -23,10 +23,14 @@ const Index = () => (
         <Link to="/projects"> other experiences</Link>.
       </p>
       <p> <b>DISCLAIMER:</b> I forked <a href="https://github.com/mldangelo/personal-site">this repo</a> to make this site.
-        I cannot take credit for the majority of the work; however, I made several stylistic changes
-        (layout, formatting, structure, etc.) so that the site better suited my needs. The app was
+        The app was
         developed, in the author&apos;s words, as a &quot;responsive, statically-generated, react
         application written with modern javascript&quot;.
+        I cannot take credit for a large portion of the work; however, I have made several
+        stylistic changes
+        (layout, formatting, structure, etc.) so that the site better suited my needs.
+        To learn more about what exactly I changed, please check out the {' '}
+        <a href="https://github.com/cameronmackinnon/cameronmackinnon.github.io/blob/main/README.md">README</a>.
       </p>
     </article>
   </Main>

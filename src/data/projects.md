@@ -1,6 +1,6 @@
 # Interests and Hobbies
-I am going to list my interests and hobbies in an attempt to trigger a recruiter's bias.
-* Health & Wellness: Rock Climbing, Soccer, Running (just for the Kudos on Strava)
+In case you're interested in how I spend my time away from work...
+* Athletics: Rock Climbing, Soccer, Running (just for the Kudos on Strava)
 * Outdoors: Hiking, Camping
 * Entertainment: Books, Movies, Concerts
 * Other: Cooking & Baking 
