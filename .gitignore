@@ -1,6 +1,15 @@
 # prefer npm over yarn
 # yarn.lock
 
+# dont bring in other yarn stuff though
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # eslint
 .eslintcache
 
