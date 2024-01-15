@@ -1,5 +1,7 @@
 const os = require("os");
 
+var double = "double";
+
 module.exports = {
   env: {
     browser: true,
