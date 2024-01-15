@@ -11,12 +11,12 @@
     "node": ">=16.x"
   },
   "scripts": {
-    "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js",
+    "analyze": "yarn build && source-map-explorer build/static/js/*.chunk.js",
     "build": "rimraf ./build && react-scripts build",
     "lint": "eslint \"**/*.js\"",
-    "predeploy": "node --max_old_space_size=16384 ./node_modules/.bin/react-scripts build && react-snap",
+    "predeploy": "yarn build && react-snap",
     "start": "react-scripts start",
-    "test": "npx jest"
+    "test": "yarn run jest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -63,5 +63,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }

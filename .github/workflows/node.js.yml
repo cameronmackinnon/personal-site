@@ -22,10 +22,10 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version-file: '.nvmrc'
-        cache: 'npm'
-    - run: npm ci
+        cache: 'yarn'
+    - run: yarn --frozen-lockfile
     - name: Lint
-      run: npm run lint
+      run: yarn lint
 
   build:
     runs-on: ${{ matrix.os }}
@@ -53,13 +53,13 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
+        cache: 'yarn'
+    - run: yarn --frozen-lockfile
     - name: Build and Statically Render
-      run: npm run predeploy
+      run: yarn predeploy
       env:
         NODE_ENV: development
     - name: Test
-      run: npm test
+      run: yarn test
       env:
         NODE_ENV: development
