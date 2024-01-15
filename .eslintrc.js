@@ -15,10 +15,10 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'jsx-a11y/anchor-is-valid': ['error', {
-      aspects: ['noHref', 'invalidHref', 'preferButton'],
-      components: ['Link'],
-      specialLink: ['to', 'hrefLeft', 'hrefRight'],
-      linebreak-style: ['error', 'windows'],
+      'aspects': ['noHref', 'invalidHref', 'preferButton'],
+      'components': ['Link'],
+      'specialLink': ['to', 'hrefLeft', 'hrefRight'],
+      'linebreak-style': ['error', 'windows'],
     }],
     'jsx-a11y/click-events-have-key-events': 0,
     'jsx-a11y/href-no-hash': 'off',
