@@ -1,6 +1,5 @@
 # Personal Website
-I forked (and later cloned) this [repo] https://github.com/mldangelo/personal-site to build this website. If you'd like to recreate this website for your own purposes, I strongly recommend referring to the original author's detailed instructions. However, I am happy to help if you encounter any bugs of your own.
-<br><br>
+I forked (and later cloned) this [repo] (https://github.com/mldangelo/personal-site) to build this website. If you'd like to recreate this website for your own purposes, I strongly recommend referring to the original author's detailed instructions. However, I am happy to help if you encounter any bugs of your own.
 
 Here is a rough attempt at summarizing the changes I made to the original site to adapt it to my needs.
 <br><br>
@@ -10,8 +9,7 @@ Site-specific:
 - removed unnecessary links/urls; upgraded favicon to newest requirements
 - updated html & css formatting to suit my preferences (headers, pictures, skills colours, etc.)
 - added additional sections on other experiences tab
-- 
-<br><br>
+
 Publishing/Hosting
 - purchased a domain from squarespace and set up with github pages
 - switched from npm to yarn for more stable builds in github CI
