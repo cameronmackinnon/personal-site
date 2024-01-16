@@ -14,7 +14,7 @@
     "analyze": "yarn build && source-map-explorer build/static/js/*.chunk.js",
     "build": "rimraf ./build && react-scripts build",
     "lint": "eslint \"**/*.js\"",
-    "predeploy": "yarn build && react-snap",
+    "predeploy": "node --max_old_space_size=4096 ./node_modules/.bin/react-scripts build && react-snap",
     "start": "react-scripts start",
     "test": "yarn run jest"
   },
