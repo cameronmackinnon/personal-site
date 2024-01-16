@@ -1,0 +1,3 @@
+next things to try:
+- updated package.json to have "NODE_OPTIONS=" before max old space size
+- update yml so both variables are development
