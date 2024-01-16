@@ -14,7 +14,7 @@
     "analyze": "yarn build && source-map-explorer build/static/js/*.chunk.js",
     "build": "rimraf ./build && react-scripts build",
     "lint": "eslint \"**/*.js\"",
-    "predeploy": "node --max_old_space_size=4096 ./node_modules/.bin/react-scripts build && react-snap",
+    "predeploy": "cross-env --max_old_space_size=4096 ./node_modules/.bin/react-scripts build && react-snap",
     "start": "react-scripts start",
     "test": "yarn run jest"
   },
@@ -42,6 +42,7 @@
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.2",
     "babel-jest": "^29.7.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.29.1",
