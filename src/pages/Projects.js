@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Markdown from 'markdown-to-jsx';
 
 import Main from '../layouts/Main';
@@ -53,7 +53,7 @@ const Projects = () => {
       <article className="post" id="projects">
         <header>
           <div className="title">
-            <h3><Link to="/projects">Other Experiences</Link></h3>
+            <h3>Other Experiences</h3>
             <span>My resume includes positions that pertain to software and business.
               But I&apos;ve had numerous other professional and non-professional experiences that
               contribute to who I am. That is the goal of this page - to include the items that
