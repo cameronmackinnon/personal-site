@@ -18,9 +18,6 @@
     "start": "react-scripts start",
     "test": "yarn run jest"
   },
-  "reactSnap": {
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
-  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
@@ -57,6 +54,9 @@
     "rimraf": "^5.0.5",
     "sass": "^1.69.7",
     "source-map-explorer": "^2.5.3"
+  },
+  "reactSnap": {
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
   },
   "browserslist": {
     "production": [
