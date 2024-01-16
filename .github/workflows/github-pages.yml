@@ -43,6 +43,7 @@ jobs:
         run: yarn run predeploy
         env:
           NODE_ENV: production
+          NODE_OPTIONS: --max_old_space_size=4096
           # Remove this line if you would like to skip using google analytics
           #REACT_APP_GA_TRACKING_ID: UA-68649021-1
       - name: Setup Pages
