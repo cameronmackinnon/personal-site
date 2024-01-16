@@ -14,7 +14,7 @@
     "analyze": "yarn build && source-map-explorer build/static/js/*.chunk.js",
     "build": "rimraf ./build && react-scripts build",
     "lint": "eslint \"**/*.js\"",
-    "predeploy": "node --max_old_space_size=16000 node_modules/.bin/react-scripts build && react-snap",
+    "predeploy": "node --max_old_space_size=4096 ./node_modules/.bin/react-scripts build && react-snap",
     "start": "react-scripts start",
     "test": "yarn run jest"
   },
@@ -26,7 +26,6 @@
     "dayjs": "^1.11.10",
     "markdown-to-jsx": "^7.4.0",
     "prop-types": "^15.8.1",
-    "puppeteer-core": "^21.7.0",
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
