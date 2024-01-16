@@ -45,8 +45,8 @@ const internships = [
     startDate: '2017-09',
     endDate: '2018-05',
     summary: `In my second year of university, I founded a tutoring service that served first-year students across all faculties (sciences, engineering, arts, etc.).
-    I hired 28 tutors and 5 executive members, along with 6 first-year representatives that helped with marketing and brand awareness. Over our six months of existence, we facilitated 100+ tutoring sesionss and four exam workshops.
-    We earned $2,500 CAD in revenue (and profited a tiny bit too). It was no Airbnb or Facebook, but it gave me an introduction to the challenges of starting your own company and leading large teams.`,
+    I hired 28 tutors and 5 executive members, along with 6 first-year representatives that helped with marketing and brand awareness. Over our six months of existence, we facilitated 100+ tutoring sessions and four exam workshops.
+    We earned 2,500 CAD in revenue (and profited a tiny bit too). It was no Airbnb or Facebook, but it gave me an introduction to the challenges of starting your own company and leading large teams.`,
     highlights: [
 
     ],

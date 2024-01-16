@@ -30,7 +30,7 @@ const skills = [
     category: ['Tools', 'Languages'],
   },
   {
-    title: 'PostgreSQL/MSSQL/SQL/Supabase',
+    title: 'SQL/MSSQL/PostgreSQL/Supabase',
     competency: 3,
     category: ['Web Development', 'Databases', 'Languages'],
   },

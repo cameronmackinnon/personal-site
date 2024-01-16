@@ -54,7 +54,7 @@ const Projects = () => {
         <header>
           <div className="title">
             <h3><Link to="/projects">Other Experiences</Link></h3>
-            <span>My resume includes experiences that primarily pertain to software and business.
+            <span>My resume includes positions that pertain to software and business.
               But I&apos;ve had numerous other professional and non-professional experiences that
               contribute to who I am. That is the goal of this page - to include the items that
               don&apos;t always get included on my resume, so that you can get a fuller picture
