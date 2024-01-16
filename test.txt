@@ -1,3 +1,6 @@
 next things to try:
 - updated package.json to have "NODE_OPTIONS=" before max old space size
 - update yml so both variables are development
+
+line i removed from package.json:
+"predeploy": "cross-env NODE_OPTIONS=--max-old-space-size=16000 ./node_modules/.bin/react-scripts build && react-snap",
