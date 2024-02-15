@@ -17,6 +17,10 @@ const routes = [
     path: '/projects',
   },
   {
+    label: 'Strava API',
+    path: '/strava',
+  },
+  {
     label: 'Contact',
     path: '/contact',
   },

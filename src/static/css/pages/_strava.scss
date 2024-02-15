@@ -1,0 +1,50 @@
+// (/strava) page
+
+#strava-activities {
+    .content-container {
+      display: flex;
+      align-items: stretch; // Make legend and map containers the same height
+      
+      .legend {
+        flex-basis: 200px; // Adjust based on your needs
+        padding: 20px;
+        border-right: 1px solid #ccc; // Optional: adds a line between the legend and the map
+        
+        ul {
+            list-style-type: none; // Removes bullet points
+            padding: 0; // Removes default padding
+            margin: 0 0 60px 0; // Ensures there's no default margin
+        }
+        
+        li {
+            margin-bottom: 10px; // Adds space between list items, adjust as needed
+        }
+
+        .color-box {
+          width: 16px;
+          height: 16px;
+          display: inline-block;
+          margin-right: 8px;
+        }
+        
+        .ride { background-color: #2196F3; }
+        .run { background-color: green; }
+        .workout { background-color: yellow; }
+        .walk { background-color: #9E9E9E; }
+        .hike { background-color: #FD7E14; }
+
+        // Adding space between buttons
+        button {
+            margin-bottom: 10px; // Adds space to the right of each button
+            &:last-child {
+                margin-right: 0; // Removes margin from the last button
+            }
+        }
+      }
+      
+      .strava-map-container {
+        flex-grow: 1; // Allow the map to fill the remaining space
+        // No fixed width; it will adapt based on the legend's width and the container's total width
+      }
+    }
+  }
