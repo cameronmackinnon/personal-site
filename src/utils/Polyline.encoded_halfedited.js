@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /*
  * Utility functions to decode/encode numbers and array's of numbers
  * to/from strings (Google maps polyline encoding)
