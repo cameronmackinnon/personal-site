@@ -44,7 +44,9 @@ export const fetchActivities = async (accessToken) => {
 
     while (isFetching) {
       const activitiesLink = `https://www.strava.com/api/v3/athlete/activities?access_token=${accessToken}&page=${currentPage}&per_page=${perPage}&before=${endTimestamp}&after=${startTimestamp}`;
+      // eslint-disable-next-line no-await-in-loop
       const response = await fetch(activitiesLink);
+      // eslint-disable-next-line no-await-in-loop
       const data = await response.json();
 
       if (data.length === 0) {
