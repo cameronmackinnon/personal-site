@@ -1,6 +1,35 @@
 // (/strava) page
 
 #strava-activities {
+    
+  .filters-container {
+    display: flex;
+    justify-content: flex-start; // Aligns items to the start, making them closer together.
+    flex-wrap: wrap; // Keeps wrapping enabled in case of smaller screens.
+    margin-bottom: 20px; // Space below the filters container.
+
+    .filter-item, button {
+      flex: 1 1 auto; // Allows items to grow and shrink as needed, but starts out only as large as their content.
+      margin-left: 0px;
+      margin-right: 0px; // Adjusts right margin for spacing between items.
+
+      &:last-child {
+        margin-right: 0; // Removes the right margin from the last item.
+      }
+
+      label {
+        margin-bottom: 5px; // Space between label and input.
+      }
+
+      input[type="date"] {
+        width: 125px; // Ensures inputs do not stretch unnecessarily.
+      }
+      input[type="number"] {
+        width: 75px; // Ensures inputs do not stretch unnecessarily.
+      }
+    }
+  }
+  
     .content-container {
       display: flex;
       align-items: stretch; // Make legend and map containers the same height
@@ -44,7 +73,7 @@
       
       .strava-map-container {
         flex-grow: 1; // Allow the map to fill the remaining space
-        // No fixed width; it will adapt based on the legend's width and the container's total width
       }
+
     }
   }

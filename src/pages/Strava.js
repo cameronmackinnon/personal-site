@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Link } from 'react-router-dom';
@@ -30,8 +30,10 @@ function speedToPace(metersPerSecond) {
 }
 
 const Strava = () => {
-  const activities = useStravaActivities();
+  const allActivities = useStravaActivities();
   const mapRef = useRef(null);
+  const [dateFilter, setDateFilter] = useState({ start: '2019-01-01', end: '2024-12-31' });
+  const [distanceFilter, setDistanceFilter] = useState({ min: 0, max: 100 });
 
   // Function to change the map view
   const setMapView = (coordinates, zoomLevel) => {
@@ -40,26 +42,24 @@ const Strava = () => {
     }
   };
 
-  useEffect(() => {
-    if (mapRef.current === null) {
-      mapRef.current = L.map('map').setView([43.668885, -79.399552], 12);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors',
-      }).addTo(mapRef.current);
-    }
+  // Correctly define updateMapWithActivities within Strava to access mapRef
+  function updateMapWithActivities(activities) {
+    // Clear existing markers/paths from the map
+    mapRef.current.eachLayer((layer) => {
+      if (layer.toGeoJSON) {
+        mapRef.current.removeLayer(layer);
+      }
+    });
 
-    // Assuming activities is an array of activity objects
+    // Add new markers/paths for filteredActivities
     activities.forEach((activity) => {
       const coordinates = L.Polyline.fromEncoded(activity.map.summary_polyline).getLatLngs();
       const color = getColorForActivityType(activity.type);
-
       const polyline = L.polyline(coordinates, {
-        color,
-        weight: 5,
-        opacity: 0.7,
-        lineJoin: 'round',
-      }).addTo(mapRef.current); // Use mapRef.current instead of map
+        color, weight: 5, opacity: 0.7, lineJoin: 'round',
+      }).addTo(mapRef.current);
 
+      // Constructing popup content
       let popupContent = `
           <h2>${activity.name}</h2>
           <hr>
@@ -76,14 +76,29 @@ const Strava = () => {
 
       polyline.bindPopup(popupContent);
     });
-    // Cleanup function to run when the component unmounts or before re-running the effect
-    return () => {
-      if (mapRef.current) {
-        mapRef.current.remove();
-        mapRef.current = null;
-      }
-    };
-  }, [activities]); // Dependency on activities ensures map updates when activities are fetched
+  }
+
+  useEffect(() => {
+    if (!mapRef.current) {
+      mapRef.current = L.map('map').setView([43.668885, -79.399552], 12);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+      }).addTo(mapRef.current);
+    }
+  }, []);
+
+  useEffect(() => {
+    const filtered = allActivities.filter((activity) => {
+      const activityDate = new Date(activity.start_date).getTime();
+      const startDate = new Date(dateFilter.start).getTime();
+      const endDate = new Date(dateFilter.end).getTime();
+      const distanceKm = activity.distance / 1000;
+      return activityDate >= startDate && activityDate <= endDate
+              && distanceKm >= distanceFilter.min && distanceKm <= distanceFilter.max;
+    });
+
+    updateMapWithActivities(filtered); // Now correctly uses the filtered list
+  }, [dateFilter, distanceFilter, allActivities]); // Dependency array to trigger re-render
 
   return (
     <Main
@@ -108,6 +123,32 @@ const Strava = () => {
           to see where I&apos;ve completed most of my activities (primarily running). You can click
           on each activity to get more information about the specific event. Enjoy!
         </p>
+        <div className="filters-container">
+          <div className="filter-item">
+            <label htmlFor="startdate">
+              Start Date:{'  '}
+              <input type="date" id="startdate" value={dateFilter.start} onChange={(e) => setDateFilter((prev) => ({ ...prev, start: e.target.value }))} />
+            </label>
+          </div>
+          <div className="filter-item">
+            <label htmlFor="enddate">
+              End Date:{'  '}
+              <input type="date" id="enddate" value={dateFilter.end} onChange={(e) => setDateFilter((prev) => ({ ...prev, end: e.target.value }))} />
+            </label>
+          </div>
+          <div className="filter-item">
+            <label htmlFor="mindist">
+              Min Distance (km):{'  '}
+              <input type="number" id="mindist" value={distanceFilter.min} onChange={(e) => setDistanceFilter((prev) => ({ ...prev, min: e.target.value }))} />
+            </label>
+          </div>
+          <div className="filter-item">
+            <label htmlFor="maxdist">
+              Max Distance (km):{'  '}
+              <input type="number" id="maxdist" value={distanceFilter.max} onChange={(e) => setDistanceFilter((prev) => ({ ...prev, max: e.target.value }))} />
+            </label>
+          </div>
+        </div>
         <div className="content-container"> {/* Flex container */}
           <div className="legend"> {/* Legend */}
             <h3>Legend</h3>
